@@ -1,13 +1,24 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
-import breakpoints from "assets/breakpoints/breakpoints";
+import { breakpoints, size } from "assets/breakpoints/breakpoints";
 
 import colorPaletteByCategory from "components/utils/colorPaletteByCategory";
+
+interface LinkContainerProps {
+  pb5?: boolean;
+}
 
 interface ContainerProps {
   imageUrl: string;
   url?: string;
 }
+
+export const LinkContainer = styled(Link)<LinkContainerProps>`
+  @media (width < ${size.desktop}) {
+    ${(props) => (props.pb5 ? "padding-bottom: 5em;" : "")};
+  }
+`;
 
 export const Container = styled.div<ContainerProps>`
   display: flex;
@@ -32,8 +43,17 @@ export const Container = styled.div<ContainerProps>`
     width: 400px;
   }
 
+  @media ${breakpoints.laptopL} {
+    height: 325px;
+    width: 500px;
+  }
+
   @media ${breakpoints.desktop} {
     height: 350px;
     width: 650px;
+
+    h2 {
+      font-size: 3.5rem;
+    }
   }
 `;

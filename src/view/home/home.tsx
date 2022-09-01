@@ -19,7 +19,7 @@ const Home: React.FC = () => {
         <ApparelTile title="Spring" url="spring" imageUrl="/" />
         <ApparelTile title="Summer" url="summer" imageUrl="/" />
         <ApparelTile title="Autumn" url="autumn" imageUrl="/" />
-        <ApparelTile title="Winter" url="winter" imageUrl="/" />
+        <ApparelTile title="Winter" url="winter" imageUrl="/" pb5 />
       </TilesContainer>
     </HomeContainer>
   );

@@ -1,4 +1,4 @@
-const size = {
+export const size = {
   mobileS: "320px",
   mobileM: "375px",
   mobileL: "425px",
@@ -9,7 +9,7 @@ const size = {
   desktopL: "2560px",
 };
 
-const breakpoints = {
+export const breakpoints = {
   mobileS: `(min-width: ${size.mobileS})`,
   mobileM: `(min-width: ${size.mobileM})`,
   mobileL: `(min-width: ${size.mobileL})`,
@@ -19,5 +19,3 @@ const breakpoints = {
   desktop: `(min-width: ${size.desktop})`,
   desktopL: `(min-width: ${size.desktop})`,
 };
-
-export default breakpoints;

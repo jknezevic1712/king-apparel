@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 import clrs from "assets/colors/colorPalette";
+import { breakpoints } from "assets/breakpoints/breakpoints";
 
 export const Container = styled.div`
   height: 10%;
@@ -16,5 +17,19 @@ export const Container = styled.div`
     height: 35px;
     width: 35px;
     cursor: pointer;
+  }
+
+  @media ${breakpoints.laptop} {
+    & img {
+      height: 45px;
+      width: 45px;
+    }
+  }
+
+  @media ${breakpoints.desktop} {
+    & img {
+      height: 45px;
+      width: 45px;
+    }
   }
 `;

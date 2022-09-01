@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import breakpoints from "assets/breakpoints/breakpoints";
+import { breakpoints } from "assets/breakpoints/breakpoints";
 
 import clrs from "assets/colors/colorPalette";
 
@@ -37,7 +37,6 @@ export const TilesContainer = styled.div`
   align-items: center;
   flex-wrap: wrap;
   gap: 5em;
-  padding-bottom: 5em;
 
   @media ${breakpoints.tablet} {
     gap: 0 5em;

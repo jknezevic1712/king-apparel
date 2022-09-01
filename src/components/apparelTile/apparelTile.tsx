@@ -1,22 +1,27 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
-import { Container } from "./apparelTile.styles";
+import { LinkContainer, Container } from "./apparelTile.styles";
 
 interface ApparelTileProps {
   title: string;
   imageUrl: string;
   url?: string;
+  pb5?: boolean;
 }
 
-const ApparelTile: React.FC<ApparelTileProps> = ({ title, imageUrl, url }) => {
+const ApparelTile: React.FC<ApparelTileProps> = ({
+  title,
+  imageUrl,
+  url,
+  pb5,
+}) => {
   if (url) {
     return (
-      <Link to={`/${url}`}>
+      <LinkContainer to={`/${url}`} pb5={pb5}>
         <Container url={url} imageUrl={imageUrl}>
           <h2>{title}</h2>
         </Container>
-      </Link>
+      </LinkContainer>
     );
   } else {
     return (

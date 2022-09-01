@@ -1,6 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 
 import clrs from "assets/colors/colorPalette";
+import { breakpoints } from "assets/breakpoints/breakpoints";
 
 const GlobalStyles = createGlobalStyle`
     /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -377,6 +378,10 @@ const GlobalStyles = createGlobalStyle`
         a {
             text-decoration: none;
             color: ${clrs.text};
+        }
+
+        @media ${breakpoints.desktop} {
+            font-size: 20px;
         }
     }
  `;
